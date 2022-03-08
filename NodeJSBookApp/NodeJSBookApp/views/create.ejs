@@ -14,12 +14,17 @@
                     <div class="panel">
                         <h2>Add a Book</h2>
                     </div>
-                    <!-- <form action="http://127.0.0.1:3000/create" method="post" id="Create">
+                    <form action="http://127.0.0.1:3000/create" method="post" id="Create">
+                        <% if(locals.error_message) { %>
+                            <div class="alert alert-danger" role="alert"><%= error_message %></div>
+                        <% } %>
                         <div class="form-group"><input type="text" class="form-control" name="book_id" placeholder="Book Id"></div>
                         <div class="form-group"><input type="text" class="form-control" name="author" placeholder="Author"></div>
                         <div class="form-group"><input type="text" class="form-control" name="title" placeholder="Title"></div>
-                        <button type="submit" class="btn btn-primary">Add</button>        
-                    </form>          -->
+                        <button type="submit" class="btn btn-primary">Create</button> 
+                        <button class="btn btn-primary" onclick="window.location.href='/home'">Back to Home</button>
+                        
+                    </form>         
                 </div>
         </div>        
     </body>

@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Book Store App</h3>
+            <div class="login-form">
+                <div class="main-div">
+                    <div class="panel">
+                        <h2>Enter book ID to delete</h2>
+                        <% if(locals.error_message) { %>
+                            <div class="alert alert-danger" role="alert"><%= error_message %></div>
+                        <% } %>
+                    </div>
+                    <form action="http://127.0.0.1:3000/delete" method="post" id="Delete">
+                        <div class="form-group"><input type="text" class="form-control" name="book_id" placeholder="Book Id"></div>
+                        <button type="submit" class="btn btn-primary">Delete</button> 
+                    </form>   
+                    <button class="btn btn-primary" onclick="window.location.href='/home'">Back to Home</button>     
+      
+                </div>
+        </div>        
+    </body>
+</html>
